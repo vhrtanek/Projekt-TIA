@@ -1,0 +1,5 @@
+class UpdateImports < ActiveRecord::Migration
+  def change
+	add_column :import, :name, :string
+  end
+end

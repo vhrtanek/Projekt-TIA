@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bank Data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bank_data.each do |bank_datum| %>
+      <tr>
+        <td><%= link_to 'Show', bank_datum %></td>
+        <td><%= link_to 'Edit', edit_bank_datum_path(bank_datum) %></td>
+        <td><%= link_to 'Destroy', bank_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bank datum', new_bank_datum_path %>
