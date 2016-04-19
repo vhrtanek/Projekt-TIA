@@ -164,10 +164,12 @@
           </div>
         <div class="row placeholders">
  	   <div class="col-xs-6 placeholder">
-		<%= area_chart BankDatum.group(:balance).sum(:amount) %>
+		<%= bar_chart BankDatum.group(:transaction_type).group_by_month(:created_at).sum(:amount) %>
 		<span class="text-muted">Balance depending on amnout's of transactions</span>
 	   </div>
 	   <div class="col-xs-6 placeholder">
+
+
 		<%= bar_chart BankDatum.group(:transaction_type).sum(:amount) %>
 		<span class="text-muted">Comparison Amount of Send/Receive money</span>
 	   </div>	

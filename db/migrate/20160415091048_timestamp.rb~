@@ -1,0 +1,5 @@
+class Timestamp < ActiveRecord::Migration
+  def change
+	modify_column :Bank_data, :created_at, :timestamp
+  end
+end
